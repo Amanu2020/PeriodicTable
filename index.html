@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Periodic Table</title>
+
+        <!--Javascript CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Awesome Font -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- <link rel="stylesheet" href="./public/font/awesomefont.css"> -->
+        <link rel="stylesheet" href="./public/css/bootstrap.css">
+        <link rel="stylesheet" href="./public/css/style.css">
+
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+
+        <!-- <script src="./public/js/jquery.js"></script> -->
+    </head>
+
+    <body class="container">
+        <div class="row">
+            <div class="col-md-12 my-3">
+                <div class="card">
+                    <div class="card-header text-center bg-secondary">
+                        <h1 class="title text-white">The Periodic Table Of Elements</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 mt-3">
+                                <div id="tabs">
+                                    <ul>
+                                        <li><a href="#periodic_table">Periodic Table</a></li>
+                                        <li><a href="#search_element">Search Element</a></li>
+                                        <li><a href="#state_matter">Search State Matter</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="periodic_table" class="mt-4 mx-auto">
+                                            <h3>Periodic Table</h3>
+                                            <p class=" text-justify">
+                                                A tabular displays the chemical elements, which are arranged by their
+                                                atomic number, atomic mass, and their category of state matter.
+                                            </p>
+                                            <div class="bg-black-50">
+                                                <img class="img-fluid" src="./public/images/periodic_table.jpg"
+                                                    alt="periodic_table" height="200">
+                                            </div>
+                                        </div>
+                                        <div id="search_element" class="my-5">
+                                            <h4 class="text-start my-3">Search Element By Name</h4>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-7 d-flex align-items-center">
+                                                    <form class="form-inline">
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-7 col-md-8">
+                                                                <input id="element" class="form-control-md border p-1"
+                                                                    type="text" placeholder="Search element by name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 col-md-4">
+                                                            <input id="search" class="btn btn-dark px-5 ml-1"
+                                                                type="submit" value="Search">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="card my-2">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title border-bottom font-weight-bold text-dark p-1">
+                                                                Element Name:&nbsp;&nbsp;<span id="name" class="text-danger"></span>
+                                                            </h5>
+                                                            <div id="display"></div>
+                                                            <p id="resultInfo" class="text-danger">&nbsp;</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="state_matter" class="my-5">
+                                            <h4 class="text-start my-3">Search Element By State Of Matter</h4>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 bg-black-50 shadow-sm">
+                                                    <div class="card w-100">
+                                                        <div class="card-body">
+                                                            <form class="form-inline">
+                                                                <div class="form-group row">
+                                                                    <div class="form-group col-sm-8">
+                                                                        <label>Element State: </label>
+                                                                    </div>
+                                                                    <div class="form-group col-sm-4">
+                                                                        <select id="element_state" class="form-control">
+                                                                            <option value="solid">Solid</option>
+                                                                            <option value="gas">Gas</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                            <h5 id="state" class="card-title text-dark py-2 my-3 w-50">
+                                                            </h5>
+                                                            <p class="text-danger not_found"></p>
+                                                            <div>
+                                                                <ul id="state_result"
+                                                                    class="list-group list-group-flush"></ul>
+                                                            </div>
+                                                            <p id="stateInfo" class="text-danger">&nbsp;</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                // Instantiate UI tabs
+                $("#tabs").tabs();
+            });
+        </script>
+        <script>require('./renderer.js');</script>
+    </body>
+
+</html>

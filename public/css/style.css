@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monda&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: rgb(245, 234, 220);
+    font-family: 'Crimson Text', serif;
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Quicksand', sans-serif; */
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Baloo 2', cursive;
+}
+
+h1 {
+    font-family: 'Chakra Petch', cursive;
+}
+
+h4 {
+    font-family: 'Chakra Petch', cursive;
+}
+
+thead {
+    font-size: 16px;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-family: 'Chakra Petch', cursive;
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    #name {
+        font-size: 14px;
+        color: white;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link .active {
+        background: black;
+    }
+
+    ::placeholder {
+        color: red;
+        opacity: 1;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}

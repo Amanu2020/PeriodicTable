@@ -1,0 +1,17 @@
+{
+  "name": "periodictable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Amanuel Endale",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^9.0.3",
+    "jquery": "^3.5.1",
+    "jquery-ui-dist": "^1.12.1",
+    "mongodb": "^3.5.8"
+  }
+}
