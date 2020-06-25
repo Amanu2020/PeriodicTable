@@ -24,7 +24,7 @@ search.addEventListener('click', (e) => {
       resultInfo.innerHTML = ' ';
       element.style.borderColor = 'black';
       const value = element.value;
-      name.innerHTML = value;
+      name.innerHTML = value.toUpperCase();
 
       let query = {
          element_name: element.value.charAt(0).toUpperCase() + value.slice(1)
