@@ -26,7 +26,9 @@ search.addEventListener('click', (e) => {
       const value = element.value;
       name.innerHTML = value;
 
-      let query = { element_name: element.value };
+      let query = {
+         element_name: element.value.charAt(0).toUpperCase() + value.slice(1)
+      };
       //console.log(query);
 
       const MongodbConn = require('./data/mongodb.js');
