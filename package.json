@@ -9,7 +9,7 @@
   "author": "Amanuel Endale",
   "license": "ISC",
   "dependencies": {
-    "electron": "^9.0.3",
+    "electron": "^15.5.5",
     "jquery": "^3.5.1",
     "jquery-ui-dist": "^1.12.1",
     "mongodb": "^3.5.8"
